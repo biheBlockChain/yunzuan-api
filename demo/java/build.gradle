@@ -1,0 +1,20 @@
+group 'one.bihe'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'com.squareup.okhttp3:okhttp:3.8.0'
+    compile 'com.madgag.spongycastle:core:1.54.0.0'
+    compile 'com.madgag.spongycastle:prov:1.54.0.0'
+    compile group: 'org.ethereum', name: 'ethereumj-core', version: '1.6.3-RELEASE'
+
+}
