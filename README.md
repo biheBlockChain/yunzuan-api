@@ -1,5 +1,12 @@
 # 云钻api
 
+
+### DEMO
+
+[java版](https://github.com/biheBlockChain/yunzuan-api/tree/master/demo/java)
+
+[php版](https://github.com/biheBlockChain/yunzuan-api/tree/master/demo/php/src/main/php)
+
 #### api地址
 
 ```
@@ -22,23 +29,23 @@ ccc : value2
 zzz : value3
 ```
 
-拼接请求参数(secretKey需要参与拼接)
-假定secretKey=SECRETKEY
+拼接请求参数(secretkey需要参与拼接)
+假定secretkey=SECRETKEY
 将key按照ascall 排序 ，key1+value1+key2+value2+... 形式拼接
 
 ```
 //拼接好的字符串
-str="appkeyvaluebbbvalue1cccvalue2secretKeySECRETKEYzzzvalue3"
+str="appkeyvaluebbbvalue1cccvalue2secretkeySECRETKEYzzzvalue3"
 
 //获取sign,使用sha256加密
 sign=sha256(str)
-//计算sign="9877707bb92f8a7945fb6ea91ea6485850a45d3cdd189741980e4495bee9973b"
+//计算sign="e09cf71bbb0747e2d7fad49b57fa540b654cfa209d3bee2791084926f409fccc"
 
 ```
 
 将sign加入到请求头header中
 ```
-sign : 9877707bb92f8a7945fb6ea91ea6485850a45d3cdd189741980e4495bee9973b
+sign : e09cf71bbb0747e2d7fad49b57fa540b654cfa209d3bee2791084926f409fccc
 ```
 
 
@@ -187,4 +194,18 @@ timestamp 当前时间戳(毫秒，下同)
 
 ```
 
+
+### 错误码
+
+```
+
+404     请求地址有误
+1001    appkey或secretKey有误
+1002    签名错误
+1003    参数错误
+1005    appkey到期
+1006    请求过期
+
+
+```
 
