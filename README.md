@@ -7,7 +7,7 @@
 
 [php版](https://github.com/biheBlockChain/yunzuan-api/tree/master/demo/php/src/main/php)
 
-[c#版](https://github.com/biheBlockChain/yunzuan-api/tree/master/demo/c#/YunZuanApp)
+[c#版](https://github.com/biheBlockChain/yunzuan-api/tree/master/demo/c%23/YunZuanApp)
 
 #### api地址
 
