@@ -10,13 +10,8 @@ namespace YunZuanApp
         static string appKey = "appKey";
         static string secretKey = "secretKey";
         static string apiUrl = "https://yunzuan-api.bihe.one/";
-        //static string apiUrl = "http://def2bbe9.ngrok.io";
         static void Main(string[] args)
         {
-            appKey = "ZWYzZmZkZmVk";
-            secretKey = "zY0MzNmYzMxNzVhN2I3MmQwMDFkOTJjZTA4Z";
-            //appKey = "OTdhN2JmMGYw";
-            //secretKey = "Dk0ZWI3NzE4OGMzMWJjZjMwZDE1MmJjOGRkM";
             Console.WriteLine(GetBalance("0x0A0d28c5D47E445D11B67aF7c2877e9220aF45cA"));
             Console.WriteLine(GetTransactionCount("0x0A0d28c5D47E445D11B67aF7c2877e9220aF45cA"));
             Console.WriteLine(GetTransactionList("0x0A0d28c5D47E445D11B67aF7c2877e9220aF45cA","",20));
@@ -38,7 +33,7 @@ namespace YunZuanApp
         {
             var request = new RestRequest("yz/getBalance", Method.POST);
             request.AddHeader("Cache-Control", "no-cache");
-            //request.AddHeader("Host", "yunzuan-api.bihe.one");
+            request.AddHeader("Host", "yunzuan-api.bihe.one");
             request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
             Dictionary<string, string> param = new Dictionary<string, string>();
             param.Add("address", address);
