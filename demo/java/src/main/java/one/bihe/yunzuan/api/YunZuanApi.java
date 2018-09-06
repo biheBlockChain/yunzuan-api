@@ -73,7 +73,7 @@ public class YunZuanApi {
         map.put("appkey", YunZuan.getAppkey());
         Map<String, String> signMap = new TreeMap<>();
         signMap.putAll(map);
-        signMap.put("secretKey", YunZuan.getSecretKey());
+        signMap.put("secretkey", YunZuan.getSecretKey());
         StringBuilder builder = new StringBuilder();
         signMap.forEach((key, value) -> {
             builder.append(key).append(value);

@@ -21,7 +21,7 @@ $params = array(
 //深拷贝
 $p1 = unserialize(serialize($params));
 //添加secretKey
-$p1['secretKey'] = 'TdiYWU0NDFjNmU5ZjU1N2QyYmIxNTMxMDJkO';
+$p1['secretkey'] = 'TdiYWU0NDFjNmU5ZjU1N2QyYmIxNTMxMDJkO';
 //排序
 ksort($p1);
 
