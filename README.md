@@ -2,7 +2,11 @@
 
 #### api地址
 
+```
 https://yunzuan-api.bihe.one
+
+http://yunzuan-api.bihe.one
+```
 
 #### 获取appkey 和secretKey
 联系我们购买获取
